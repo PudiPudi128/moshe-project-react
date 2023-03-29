@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Carousel } from "flowbite-react";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const searchRef = useRef();
+  const navigate = useNavigate();
   return (
-    <div >
+    <div>
       <div className="upNav">
         <div className="logoAndSearch flex justify-between m-5">
           <h1>LOGO</h1>
@@ -16,8 +19,10 @@ const Navbar = () => {
                 className="input input-bordered input-sm"
               />
               <button
+                onClick={() => navigate(searchRef.current.value)}
                 className="btn btn-square btn-sm"
               >
+                {/* <NavLink to={}></NavLink> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-4 w-4"
@@ -36,11 +41,32 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-          <Carousel slideInterval={5000}>
+        {/* h-56 sm:h-64 xl:h-80 2xl:h-96  */}
+        <div className="h-[600px] w-full">
+          <Carousel>
             <img
-              className="sm:h-[400px] md:h-[500px] lg:h-[600px]"
-              src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              className="h-[750px] object-fill hover:brightness-95"
+              src="https://cutewallpaper.org/21/demon-slayer-zenitsu-wallpaper/Hd-Demon-Slayer-Background-3840x1080-Elkgroveses.com.jpg"
+              alt="..."
+            />
+            <img
+              className="h-[700px] hover:brightness-95"
+              src="https://wallpapercave.com/wp/wp4657480.jpg"
+              alt="..."
+            />
+            <img
+              className="h-[950px] hover:brightness-95"
+              src="https://store-images.s-microsoft.com/image/apps.18464.63877934742645278.665d3378-1d8e-4341-a7b2-14afc3a69269.87a74448-9330-4f93-89e0-eb23be82251a?mode=scale&q=90&h=1080&w=1920"
+              alt="..."
+            />
+            <img
+              className="h-[700px] hover:brightness-95"
+              src="https://images.saymedia-content.com/.image/t_share/MTc2MjQ4NTM5NjgzNDMyMzI3/15-anime-that-will-remind-you-of-ansatsu-kyoushitsu-assassination-classroom.jpg"
+              alt="..."
+            />
+            <img
+              className="h-[700px] hover:brightness-95"
+              src="https://staticg.sportskeeda.com/editor/2022/10/d8581-16663316932144-1920.jpg"
               alt="..."
             />
           </Carousel>

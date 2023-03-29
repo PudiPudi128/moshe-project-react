@@ -1,24 +1,23 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import MovieList from "./MovieList";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
+  // const [searchUrl, setSearchUrl] = useState("bank");
 
-  const movieApi = async function () {
-    let { data } = await axios.get(
+  const movieApi = async () => {
+    const { data } = await axios.get(
       `http://www.omdbapi.com/?s=bank&apikey=55a6d6bc`
     );
+    console.log("data=", data.Search);
     setMovies(data.Search);
-    console.log(movies);
   };
   useEffect(() => {
     movieApi();
+    console.log(movies);
   }, []);
-  return (
-    <div>
-      <button>click</button>
-    </div>
-  );
+  return <div><MovieList movies={movies}/></div>;
 };
 
 export default Home;
