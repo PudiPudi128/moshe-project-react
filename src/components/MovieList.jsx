@@ -2,8 +2,6 @@ import React from "react";
 import {BsPlayBtnFill} from "react-icons/bs";
 
 const MovieList = ({ movies }) => {
-  console.log(movies);
-
   return (
     <div className="grid grid-cols-4 gap-4 justify-items-center mx-auto my-0 container mt-5">
       {movies.map((movie, i) => (
