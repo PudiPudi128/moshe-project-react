@@ -7,11 +7,14 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
   const [searchUrl, setSearchUrl] = useState("naruto");
   const { id } = useParams();
+  const { idYear } = useParams();
   const location = useLocation();
 
   const movieApi = async () => {
     const { data } = await axios.get(
-      `http://www.omdbapi.com/?s=${searchUrl}&apikey=55a6d6bc`
+      !idYear
+        ? `http://www.omdbapi.com/?s=${searchUrl}&apikey=55a6d6bc`
+        : `http://www.omdbapi.com/?s=${(searchUrl)? searchUrl : naruto}&y=${idYear}&apikey=55a6d6bc`
     );
     console.log("data=", data.Search);
     setMovies(data.Search);
@@ -19,6 +22,10 @@ const Home = () => {
   useEffect(() => {
     movieApi();
   }, [searchUrl]);
+
+  useEffect(() => {
+    movieApi();
+  }, [idYear]);
 
   useEffect(() => {
     setSearchUrl(id ? id : "naruto");
