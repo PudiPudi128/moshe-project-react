@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
 import Layout from "../layout/Layout";
 import NotFound404 from "../layout/NotFound404";
+import Info from "../components/Info";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,8 @@ const AppRoutes = () => {
           <Route path="/search/:id" element={<Home />} />
           <Route path="/search/:id/year/:idYear" element={<Home />} />
         </Route>
+        <Route path="/search/:id/year/:idYear/info" element={<Info />} />
+        <Route path="/search/:id/info" element={<Info />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
     </Router>
