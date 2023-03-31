@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import MovieList from "./MovieList";
 
 const Home = () => {
@@ -14,7 +14,9 @@ const Home = () => {
     const { data } = await axios.get(
       !idYear
         ? `http://www.omdbapi.com/?s=${searchUrl}&apikey=55a6d6bc`
-        : `http://www.omdbapi.com/?s=${(searchUrl)? searchUrl : naruto}&y=${idYear}&apikey=55a6d6bc`
+        : `http://www.omdbapi.com/?s=${
+            searchUrl ? searchUrl : naruto
+          }&y=${idYear}&apikey=55a6d6bc`
     );
     console.log("data=", data.Search);
     setMovies(data.Search);

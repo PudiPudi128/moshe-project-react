@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsPlayBtnFill } from "react-icons/bs";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import Info from "./Info";
 
 const MovieList = ({ movies, urlYear, urlName }) => {
-  const navigate = useNavigate();
+  const { idMovie } = useParams();
+  console.log("id=",idMovie);
   return (
     <div className="grid grid-cols-4 gap-4 justify-items-center mx-auto my-0 container mt-5">
       {movies ? (
@@ -13,8 +14,8 @@ const MovieList = ({ movies, urlYear, urlName }) => {
             <NavLink
               to={
                 urlYear
-                  ? `/search/${urlName}/year/${urlYear}/info`
-                  : `/search/${(urlName)?urlName:"naruto"}/info`
+                  ? `/search/${urlName}/year/${urlYear}/id/${movie.imdbID}`
+                  : `/search/${urlName ? urlName : "naruto"}/id/${movie.imdbID}`
               }
               className="absolute bg-black h-full w-full opacity-0 hover:opacity-90 duration-500 flex justify-center items-center"
             >
@@ -26,6 +27,8 @@ const MovieList = ({ movies, urlYear, urlName }) => {
       ) : (
         <h1 className="text-5xl">No results...</h1>
       )}
+      {/* {(idMovie)? <Info movies={movies}/>: null} */}
+      
     </div>
   );
 };

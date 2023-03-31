@@ -14,8 +14,8 @@ const AppRoutes = () => {
           <Route path="/search/:id" element={<Home />} />
           <Route path="/search/:id/year/:idYear" element={<Home />} />
         </Route>
-        <Route path="/search/:id/year/:idYear/info" element={<Info />} />
-        <Route path="/search/:id/info" element={<Info />} />
+        <Route path="/search/:id/year/:idYear/id/:idMovie" element={<Info />} />
+        <Route path="/search/:id/id/:idMovie" element={<Info />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
     </Router>
