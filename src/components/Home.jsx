@@ -34,7 +34,7 @@ const Home = () => {
   }, [location]);
   return (
     <div>
-      {/* <MovieList movies={movies} urlYear={idYear} urlName={id} /> */}
+      <MovieList movies={movies} urlYear={idYear} urlName={id} />
     </div>
   );
 };
