@@ -6,8 +6,7 @@ import { useNavigate, NavLink, useParams, Link } from "react-router-dom";
 const Navbar = () => {
   const searchRef = useRef();
   const selcetRef = useRef();
-  const { id } = useParams();
-  const { idYear } = useParams();
+  const { id, idYear } = useParams();
   const navigate = useNavigate();
   return (
     <div>

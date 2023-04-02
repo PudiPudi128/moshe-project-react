@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Card } from "flowbite-react";
 
 const Info = () => {
   const [dataMovie, setDataMovie] = useState([]);
   const { idMovie } = useParams();
+  const navigate = useNavigate();
 
   const movieApi = async () => {
     const { data } = await axios.get(
@@ -32,6 +33,7 @@ const Info = () => {
           <p className="font-normal text-gray-700 dark:text-gray-400">
           {dataMovie.Plot}
           </p>
+          <button className="btn " onClick={()=>navigate(-1)}>Back</button>
         </Card>
       </div>
     </div>
