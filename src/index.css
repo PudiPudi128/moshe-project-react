@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Blaka+Hollow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ewert&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.font-blaka{
-    font-family: 'Blaka Hollow', cursive;
+.font-ewert{
+    font-family: 'Ewert', cursive;
 }

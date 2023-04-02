@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Carousel } from "flowbite-react";
 import { useNavigate, NavLink, useParams, Link } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+// import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
   const searchRef = useRef();
@@ -17,7 +17,7 @@ const Navbar = () => {
             className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
             onClick={() => navigate("/")}
           >
-            <img className="w-60 " src={Logo} alt="Logo" />
+            <h1 className=" font-ewert text-6xl ps-3 text-red-600">Movies</h1>
           </button>
           <button className="btn xl:w-[370px] md:w-[300px] sm:w-[250px] xs:w-[200px] max-sm:w-[100px] btn-warning absolute top-[532px]">
             Click on the image for more infomation
