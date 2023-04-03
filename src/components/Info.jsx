@@ -22,7 +22,7 @@ const Info = () => {
 
   return (
     <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col lg:flex-row shadow-2xl border border-primary">
         <img
           src={dataMovie.Poster}
           className="max-w-sm rounded-lg shadow-2xl"
