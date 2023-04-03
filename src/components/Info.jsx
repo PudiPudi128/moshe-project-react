@@ -21,20 +21,19 @@ const Info = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="">
-        <Card className=" "
-          horizontal={true}
-          imgSrc={dataMovie.Poster}
-        >
-          <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {dataMovie.Title}
-          </h5>
-          <p className="font-normal text-gray-700 dark:text-gray-400">
-          {dataMovie.Plot}
-          </p>
-          <button className="btn " onClick={()=>navigate(-1)}>Back</button>
-        </Card>
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero-content flex-col lg:flex-row">
+        <img
+          src={dataMovie.Poster}
+          className="max-w-sm rounded-lg shadow-2xl"
+        />
+        <div>
+          <h1 className="text-5xl font-bold">{dataMovie.Title}</h1>
+          <p className="py-6">{dataMovie.Plot}</p>
+          <button onClick={() => navigate(-1)} className="btn btn-primary">
+            Back
+          </button>
+        </div>
       </div>
     </div>
   );
