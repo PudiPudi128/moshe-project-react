@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useNavigate, NavLink, useParams, Link } from "react-router-dom";
+import React, { useRef, } from "react";
+import { useNavigate, useParams} from "react-router-dom";
 import Carousel from "../components/Carousel";
-// import Logo from "../assets/Logo.png";
 
 const Navbar = () => {
   const searchRef = useRef();
