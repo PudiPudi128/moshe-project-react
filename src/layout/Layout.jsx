@@ -1,14 +1,16 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom';
-import Navbar from './Navbar';
+import React from "react";
+import { Outlet, useParams } from "react-router-dom";
+import Navbar from "./Navbar";
+import LogoAndSearch from "../components/LogoAndSearch";
 
 const Layout = () => {
+  const { idMovie } = useParams();
   return (
     <div>
-        <Navbar/>
-        <Outlet/>
+      {idMovie ? <LogoAndSearch /> : <Navbar />}
+      <Outlet />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

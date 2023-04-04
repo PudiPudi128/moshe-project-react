@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsPlayBtnFill } from "react-icons/bs";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
-import Info from "./Info";
+import { NavLink, useParams } from "react-router-dom";
 
 const MovieList = ({ movies, urlYear, urlName }) => {
   const { idMovie } = useParams();
@@ -26,9 +25,7 @@ const MovieList = ({ movies, urlYear, urlName }) => {
         ))
       ) : (
         <h1 className="text-5xl">No results...</h1>
-      )}
-      {/* {(idMovie)? <Info movies={movies}/>: null} */}
-      
+      )}      
     </div>
   );
 };
