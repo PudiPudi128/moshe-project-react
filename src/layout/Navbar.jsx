@@ -13,10 +13,13 @@ const Navbar = () => {
       <div className="upNav">
         <LogoAndSearch />
         <Carousel idYear={idYear} id={id} />
+        <button className="btn xl:w-[370px] md:w-[300px] sm:w-[250px] xs:w-[200px] max-sm:w-[100px] btn-warning absolute top-[552px]">
+          Click on the image for more infomation
+        </button>
       </div>
       <div className="downNav flex items-center justify-center mx-auto gap-3 container mt-5">
-        <Select id={id}/>
-        <TopYear id={id}/>
+        <Select id={id} />
+        <TopYear id={id} />
       </div>
     </div>
   );

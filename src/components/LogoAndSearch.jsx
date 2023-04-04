@@ -12,9 +12,6 @@ const LogoAndSearch = () => {
       >
         <h1 className=" font-ewert text-6xl ps-3 text-red-600">Movies</h1>
       </button>
-      <button className="btn xl:w-[370px] md:w-[300px] sm:w-[250px] xs:w-[200px] max-sm:w-[100px] btn-warning absolute top-[532px]">
-        Click on the image for more infomation
-      </button>
       <div className="form-control">
         <div className="input-group input-group-sm">
           <input
