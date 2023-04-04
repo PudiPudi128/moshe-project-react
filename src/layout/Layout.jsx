@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import LogoAndSearch from "../components/LogoAndSearch";
 
 const Layout = () => {
@@ -9,6 +10,7 @@ const Layout = () => {
     <div>
       {idMovie ? <LogoAndSearch /> : <Navbar />}
       <Outlet />
+      <Footer />
     </div>
   );
 };
