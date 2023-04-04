@@ -7,7 +7,7 @@ const TopYear = ({id}) => {
       <h1 className="me-2 text-white text-xl">Top Years:</h1>
       {Array.from({ length: 8 }, (_, i) => (
         <NavLink
-          className="me-2 hover:text-purple-600 pt-1"
+          className="me-2 hover:text-error pt-1"
           key={i}
           to={`/search/${id ? id : "naruto"}/year/${1950 + i * 10}`}
         >
