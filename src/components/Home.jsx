@@ -6,8 +6,7 @@ import MovieList from "./MovieList";
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [searchUrl, setSearchUrl] = useState("naruto");
-  const { id } = useParams();
-  const { idYear } = useParams();
+  const { id, idYear } = useParams();
   const location = useLocation();
 
   const movieApi = async () => {
