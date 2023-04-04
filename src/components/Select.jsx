@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router";
 
-const Select = ({id}) => {
+const Select = ({ id }) => {
   const navigate = useNavigate();
   const selcetRef = useRef();
   return (
