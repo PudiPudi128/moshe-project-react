@@ -5,7 +5,7 @@ import Loading from "./Loading";
 import { Rating } from "flowbite-react";
 
 const Info = () => {
-  const [dataMovie, setDataMovie] = useState([]);
+  const [dataMovie, setDataMovie] = useState(null);
   const { idMovie } = useParams();
   const navigate = useNavigate();
 
@@ -18,13 +18,14 @@ const Info = () => {
   };
 
   useEffect(() => {
-    movieApi();
+      movieApi();
   }, []);
-
   return (
     <div>
-      {dataMovie && (
-        <div className="hero min-h-screen bg-base-200">
+      {dataMovie === null ? (
+        <Loading />
+      ) : (
+        <div className="info hero min-h-screen bg-base-200">
           <div className="hero-content flex-col lg:flex-row shadow-2xl shadow-indigo-500/50 border border-primary">
             <img
               src={dataMovie.Poster}
@@ -36,20 +37,6 @@ const Info = () => {
               <p className="py-2">Genre: {dataMovie.Genre}</p>
               <p className="py-2">Actors: {dataMovie.Actors}</p>
               <p className="py-2">Year: {dataMovie.Year}</p>
-              <React.Fragment>
-                <Rating size="lg">
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star filled={false} />
-                </Rating>
-              </React.Fragment>
               <button onClick={() => navigate(-1)} className="btn btn-primary">
                 Back
               </button>

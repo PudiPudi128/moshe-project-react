@@ -2,7 +2,7 @@ import React from "react";
 import { BsPlayBtnFill } from "react-icons/bs";
 import { NavLink, useParams } from "react-router-dom";
 
-const MovieList = ({ movies, urlYear, urlName }) => {
+const MovieList = ({ movies, idYear, id }) => {
   const { idMovie } = useParams();
   console.log("id=",idMovie);
   return (
@@ -12,9 +12,9 @@ const MovieList = ({ movies, urlYear, urlName }) => {
           <div key={i} className="bg-gray-500 relative">
             <NavLink
               to={
-                urlYear
-                  ? `/search/${urlName}/year/${urlYear}/id/${movie.imdbID}`
-                  : `/search/${urlName ? urlName : "naruto"}/id/${movie.imdbID}`
+                idYear
+                  ? `/search/${id}/year/${idYear}/id/${movie.imdbID}`
+                  : `/search/${id ? id : "naruto"}/id/${movie.imdbID}`
               }
               className="absolute bg-black h-full w-full opacity-0 hover:opacity-90 duration-500 flex justify-center items-center"
             >
