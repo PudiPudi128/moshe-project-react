@@ -20,9 +20,6 @@ const Home = () => {
     setMovies(data.Search);
   };
 
-  // useEffect(() => {
-  //   movieApi();
-  // }, [idYear]);
 
   useEffect(() => {
     movieApi();
