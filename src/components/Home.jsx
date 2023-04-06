@@ -11,8 +11,8 @@ const Home = () => {
   const movieApi = async () => {
     const { data } = await axios.get(
       !idYear
-        ? `http://www.omdbapi.com/?s=${id ? id : "naruto"}&apikey=55a6d6bc`
-        : `http://www.omdbapi.com/?s=${
+        ? `https://www.omdbapi.com/?s=${id ? id : "naruto"}&apikey=55a6d6bc`
+        : `https://www.omdbapi.com/?s=${
             id ? id : "naruto"
           }&y=${idYear}&apikey=55a6d6bc`
     );
