@@ -3,7 +3,6 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/tw-elements/dist/js/**/*.js",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
@@ -11,7 +10,6 @@ module.exports = {
   },
   plugins: [
     require("daisyui"),
-    require("tw-elements/dist/plugin"),
     require("flowbite/plugin"),
   ],
 
@@ -23,6 +21,6 @@ module.exports = {
     logs: true,
     rtl: false,
     prefix: "",
-    darkTheme: ["light", "dark"]
+    darkTheme: ["dark"]
   },
 };
