@@ -5,6 +5,7 @@ import { NavLink, useParams } from "react-router-dom";
 const MovieList = ({ movies, idYear, id }) => {
   const { idMovie } = useParams();
   console.log("id=",idMovie);
+  console.log("movies list=",movies);
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4 justify-items-center mx-auto my-0 container mt-5">
       {movies ? (
