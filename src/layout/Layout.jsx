@@ -7,7 +7,7 @@ import LogoAndSearch from "../components/LogoAndSearch";
 const Layout = () => {
   const { idMovie } = useParams();
   return (
-    <div>
+    <div className="layout">
       {idMovie ? <LogoAndSearch /> : <Navbar />}
       <Outlet />
       <Footer />
