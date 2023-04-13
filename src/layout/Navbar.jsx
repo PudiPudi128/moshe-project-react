@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
         </div>
       {/* </div> */}
-      <div className="downNav flex items-center justify-center mx-auto gap-3 container mt-5">
+      <div className="downNav flex items-center justify-center sm:justify-between sm:items-start mx-auto gap-3 container mt-5">
         <Select id={id} />
         <TopYear id={id} />
       </div>
