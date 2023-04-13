@@ -8,9 +8,11 @@ const Info = () => {
   const { idMovie } = useParams();
   const navigate = useNavigate();
 
+  const apikey = "55a6d6bc";
+
   const movieApi = async () => {
     const { data } = await axios.get(
-      `https://www.omdbapi.com/?i=${idMovie}&apikey=55a6d6bc`
+      `https://www.omdbapi.com/?i=${idMovie}&apikey=${apikey}`
     );
     console.log("dataInfo=", data);
     setDataMovie(data);
