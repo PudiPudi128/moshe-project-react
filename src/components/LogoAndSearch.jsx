@@ -5,12 +5,12 @@ const LogoAndSearch = () => {
   const searchRef = useRef();
   const navigate = useNavigate();
   return (
-    <div className="logoAndSearch flex justify-between mx-auto w-full m-5 pr-3 absolute z-50">
+    <div className="logoAndSearch flex justify-between items-center mx-auto w-full m-5 pr-3 absolute z-50">
       <button
         className=" transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
         onClick={() => navigate("/")}
       >
-        <h1 className=" font-ewert text-6xl ps-3 text-red-600">Movies</h1>
+        <h1 className="font-ewert max-sm:text-2xl sm:text-5xl md:text-6xl ps-3 text-red-600">Movies</h1>
       </button>
       <div className="form-control">
         <div className="input-group input-group-sm">
@@ -26,7 +26,7 @@ const LogoAndSearch = () => {
             ref={searchRef}
             type="text"
             placeholder="Search…"
-            className="input input-bordered input-md input-error text-error placeholder:text-error"
+            className="input input-xs sm:input-sm md:input-md input-bordered input-error text-error placeholder:text-error"
           />
           <button
             onClick={() => {
@@ -35,7 +35,7 @@ const LogoAndSearch = () => {
                 : navigate("/"),
                 (searchRef.current.value = "");
             }}
-            className="btn btn-square btn-md btn-error"
+            className="btn btn-xs sm:btn-sm md:btn-md btn-square btn-error"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
